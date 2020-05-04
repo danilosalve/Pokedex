@@ -11,4 +11,8 @@ export class PokedexService {
   getPokemon(name: string) {
     return this.baseHttp.get(`pokemon/${name}/`);
   }
+
+  getPokemonByidWithForm(id: number) {
+    return this.baseHttp.get(`pokemon-form/${id.toString()}/`);
+  }
 }

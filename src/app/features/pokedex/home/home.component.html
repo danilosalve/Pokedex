@@ -8,5 +8,32 @@
   (p-change-model)="onKeyUp($event)"
 ></po-input>
 
+<br>
+
 <p>{{values}}</p>
 
+<br>
+<hr>
+<br>
+
+<div class="po-row">
+  <po-widget
+    class="po-sm-12 po-md-8 po-lg-6"
+    p-height="250"
+    p-title="Ficha do Pokemon"
+  >
+    <po-avatar class="po-md-4" p-size="lg" p-src={{photo}}> </po-avatar>
+
+    <div class="po-md-8">
+      <p><strong>Nome:</strong> {{ name }}</p>
+      <p><strong>Tipo:</strong></p>
+      <ul>
+        <li *ngFor="let type of types">{{types}}</li>
+      </ul>
+      <p><strong>Habilidades:</strong></p>
+      <ul>
+        <li *ngFor="let item of items">{{item}}</li>
+      </ul>
+    </div>
+  </po-widget>
+</div>
